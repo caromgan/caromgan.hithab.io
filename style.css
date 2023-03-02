@@ -1,0 +1,77 @@
+p{
+    color: black;
+    font-family: fantasy;
+}
+h1{ font-family:'Courier New', Courier, monospace;
+    color:lightpink ;
+    border-style: solid;
+    border-color: cadetblue;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 400px;
+    margin-top: 50px;
+    padding: 10px;
+    font-size: 60px;
+}
+/** comprende las capacidades de la parsona*/
+section{
+    margin-bottom: 10px;
+    margin-left: 100px;
+    margin-right: 200px;
+    margin-top: 10px;
+}
+/** comprende un detallede las capacidades de la parsona*/
+#detalle {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: grey;
+    margin-bottom: 10px;
+    margin-left: 100px;
+    margin-right: 200px;
+    margin-top: 10px;
+}
+#fin_pagina {
+    color: black;
+    font-family: fantasy;
+    size: 10px;
+    margin-bottom: 10px;
+    margin-left: 800px;
+    margin-right: 20px;
+    margin-top: 10px;
+
+}
+/** subindices para cada capacidad de la persona*/
+.subindices {
+    font-family: fantasy;
+    color: darkcyan ;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 200px;
+    margin-top: 10px;
+    font-size: 25px;  
+
+}
+body{
+    background-color: mistyrose;
+    opacity: 1;
+    background-color: hsl(0, 100, 75);
+}
+img{ border-style: solid;
+    border-color: darksalmon;
+    margin-bottom: 50px;
+    margin-left: 250px;
+    margin-right: 100px;
+    margin-top: 20px;
+    float: right;
+}
+#detallepersonal {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: grey;
+    margin-bottom: 5px;
+    margin-left: 50px;
+    margin-right: 350px;
+    margin-top: 5px;
+    padding: 20px;
+    font-size: 20px;
+}
+
+/** luego que uso el # y la clase ver el dOM*/
