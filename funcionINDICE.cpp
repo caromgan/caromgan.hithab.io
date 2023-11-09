@@ -10,8 +10,10 @@ using namespace std;
 #include <string>
 #include <locale>
 
-void indice (string participanteGanador,bool ganador,string maximoJugador,int gananciaNoRoboUno,int gananciaNoRoboDos,int puntosNoPasarTurnoUno, int puntosNoPasarTurnoDos,int roboAccionTresUno,int roboAccionTresDos,int totalMalUbicadas,int puntosGanarPartida,string &nombreUno, string &nombreDos){
+void indice (int &opcion,char &confirma,string participanteGanador,bool ganador,string maximoJugador,int gananciaNoRoboUno,int gananciaNoRoboDos,int puntosNoPasarTurnoUno, int puntosNoPasarTurnoDos,int roboAccionTresUno,int roboAccionTresDos,int totalMalUbicadas,int puntosGanarPartida,string &nombreUno, string &nombreDos){
     setlocale(LC_ALL, "Spanish");
+char nombreOk;
+int elijo;
 cout <<"--------------------------------------"<< endl;
 cout<< "CLUTCH"<< endl;
 cout<<"--------------------------------------"<< endl;
@@ -21,8 +23,7 @@ cout<< "3- CREDITOS "<< endl;
 cout<<"--------------------------------------"<< endl;
 cout<< "0- SALIR"<< endl;
 
-int opcion;
-char confirma;
+
 cout<<endl<<endl;
 
 if (ganador==true){
@@ -40,12 +41,9 @@ if (opcion==0){
 cout<<"--------------------------------------"<< endl;
 cout<< "CLUTCH"<< endl;
 cout<<"--------------------------------------"<< endl;
-    cout<< "Confirma que desea salir del juego? S\N"<< endl;
+    cout<< "Confirma que desea salir del juego? S o N"<< endl;
     cin>> confirma;
-    if (toupper (confirma)=='S'){
-        cout<< "GRACIAS POR PARTICIPAR EN ESTE JUEGO"<<endl;
-        cout<< "Presione 0 para continuar... "<< endl;
-    }
+    system ("cls");
 }
 
 float total=0;
@@ -64,8 +62,8 @@ cout<< "Nombre jugador 2 ----> ";
 getline (cin, nombreDos);
 cout<<endl<<endl;
 cout << "Confirma los nombres S/N"<< endl;
-cin>> confirma;
-while ( toupper(confirma)=='N'){
+cin>> nombreOk;
+while ( toupper(nombreOk)=='N'){
     cout<<endl<<endl;
     getline (cin, nombreUno);
     cout<< "Ingrese primer nombre correcto"<< endl;
@@ -73,8 +71,9 @@ while ( toupper(confirma)=='N'){
     cout<< "Ingrese Segundo nombre correcto"<< endl;
     getline (cin, nombreDos);
     cout << "Confirma los nombres S/N"<< endl;
-    cin>>confirma;
+    cin>>nombreOk;
 }
+system ("cls");
 }
 
 if(opcion==2){
@@ -85,7 +84,7 @@ cout<< "HITOS                 "<<participanteGanador<< endl;
 cout<<"--------------------------------------"<< endl;
 if (participanteGanador==nombreUno){
 cout<< "Ganar la Partida ____________________+"<< puntosGanarPartida  <<"PDV"<<endl;
-cout<< "Robo a última carta jugador rival____+"<< roboAccionTresUno  <<"PDV"<<endl;
+cout<< "Robo a ultima carta jugador rival____+"<< roboAccionTresUno <<"PDV"<<endl;
 cout<< "Cartas mal ubicadas del rival x 4____+"<< totalMalUbicadas    <<"PDV"<<endl;
 cout<< "Sin pasar de turno___________________+"<<puntosNoPasarTurnoUno<<"PDV"<<endl;
 cout<< "Sin haber sufrido un robo del rival__+"<<gananciaNoRoboUno    <<"PDV"<<endl;
@@ -93,14 +92,14 @@ cout<<"---------------------------------------"<< endl;
 total=(float)puntosGanarPartida+roboAccionTresUno+totalMalUbicadas+puntosNoPasarTurnoUno+gananciaNoRoboUno;
 cout<< endl<< endl;
 cout<< "TOTAL________________________________"<< total<<"PDV"<<endl;
-cout<< "GANADOR: "<<participanteGanador<<" CON "<< total <<"PUNTOS DE VICTORIA "<< endl;
+cout<< endl<< endl;
+cout<< "GANADOR: "<<participanteGanador<<" CON "<< total <<" PUNTOS DE VICTORIA "<< endl;
 cout<< endl<< endl;
 
-cout<< "Presione 0 para continuar... "<< endl;
-}
-if (participanteGanador==nombreDos){
+
+} else if (participanteGanador==nombreDos){
 cout<< "Ganar la Partida ____________________+"<< puntosGanarPartida  << "PDV"<< endl;
-cout<< "Robo a última carta jugador rival____+"<< roboAccionTresDos  << "PDV"<< endl;
+cout<< "Robo a ultima carta jugador rival____+"<< roboAccionTresDos << "PDV"<< endl;
 cout<< "Cartas mal ubicadas del rival x 4____+"<< totalMalUbicadas    << "PDV"<<endl;
 cout<< "Sin pasar de turno___________________+"<<puntosNoPasarTurnoDos<< "PDV"<<endl;
 cout<< "Sin haber sufrido un robo del rival__+"<<gananciaNoRoboDos    << "PDV"<< endl;
@@ -108,11 +107,23 @@ cout<<"---------------------------------------"<< endl;
 total=(float)puntosGanarPartida+roboAccionTresDos+totalMalUbicadas+puntosNoPasarTurnoDos+gananciaNoRoboDos;
 cout<< "TOTAL________________________________"<<total <<"PDV"<<endl;
 cout<< endl<< endl;
-cout<< "GANADOR: "<<participanteGanador<<" CON "<< total <<"PUNTOS DE VICTORIA "<< endl;
+cout<< "GANADOR: "<<participanteGanador<<" CON "<< total <<" PUNTOS DE VICTORIA "<< endl;
 cout<< endl<< endl;
 
-cout<< "Presione 0 para continuar... "<< endl;
+
 }
+cout<< "Presione 0 para continuar... "<< endl;
+    cin >> elijo ;
+    system ("cls");
+    //while (elijo !=0){
+      //  cout<< "Presione 0 para continuar... "<< endl;
+        //cin >> elijo;
+        //system ("cls");
+    //}
+    //while (elijo==0){
+    //indice(confirma,participanteGanador,ganador, maximoJugador, gananciaNoRoboUno, gananciaNoRoboDos, puntosNoPasarTurnoUno,  puntosNoPasarTurnoDos, roboAccionTresUno, roboAccionTresDos, totalMalUbicadas, puntosGanarPartida,nombreUno, nombreDos);
+//}
+
 }
 
 
@@ -126,8 +137,20 @@ cout<<"Desarrollado por CAROLINA MABEL GANDIN// legajo 18-28758"<< endl;
 cout<<endl<<endl;
 cout<<"Equipo: CODI-FIN"<< endl;
 cout<<endl<<endl;
+
 cout<< "Presione 0 para continuar... "<< endl;
-}
+    cin >> elijo ;
+    system ("cls");
+    while (elijo !=0){
+        cout<< "Presione 0 para continuar... "<< endl;
+        cin >> elijo;
+        system ("cls");
+    }
+    //while (elijo==0){
+    //indice(confirma,participanteGanador,ganador, maximoJugador, gananciaNoRoboUno, gananciaNoRoboDos, puntosNoPasarTurnoUno,  puntosNoPasarTurnoDos, roboAccionTresUno, roboAccionTresDos, totalMalUbicadas, puntosGanarPartida,nombreUno, nombreDos);
+    //}
+
+    }
 
 }
 
@@ -260,7 +283,7 @@ setlocale(LC_ALL, "Spanish");
 
     cout<<"Inicia el juego el jugador "<< maximoJugador << endl;
 
-    cout<<"ARRANCAMOS ?? S/N"<< endl;
+    cout<<"ARRANCAMOS ?? presione cualquier letra..."<< endl;
     cin >> arranque;
     system ("cls");
 
@@ -305,8 +328,6 @@ cout<<"+-----------------------------------+"<< endl;
 
 
   }
-
-
 
 void lanzarDado(bool &roboCartaUno,bool &roboCartaDos, bool pasoTurnoUno,bool pasoTurnoDos,int tirarDado, char cartasJugadorUno[], char cartasJugadorDos[], int TAM,int paloJugadorUno[],int paloJugadorDos[],string nombreUno, string nombreDos,string maximoJugador,int repartirCartas [][4],char cartas [],int palos [],int turno, int cont,char cartaBloqueadaDos[],char cartaBloqueadaUno[],int paloBloqueadoUno[], int paloBloqueadoDos[]){
 setlocale(LC_ALL, "Spanish");
@@ -3722,7 +3743,9 @@ setlocale(LC_ALL, "Spanish");
 
 
 int malUbicadasJugadorDos=0,malUbicadasJugadorUno=0;
+
 puntosGanarPartida=15;//ACUMULO PUNTOS POR SER GANADOR
+
 //DATOS JUGADOR UNO
 
 if(participanteGanador==nombreUno){
@@ -3746,7 +3769,7 @@ if(participanteGanador==nombreUno){
     if (cartasJugadorDos[4]!='A'){
         malUbicadasJugadorDos++;
     }
-    totalMalUbicadas=malUbicadasJugadorDos*5;// REALIZO LA CUENTA FINAL DE ESTOS PUNTOS POR ESTAR MAL ACOMODADAS LAS CARTAS EN EL RIVAL
+    totalMalUbicadas=malUbicadasJugadorDos*4;// REALIZO LA CUENTA FINAL DE ESTOS PUNTOS POR ESTAR MAL ACOMODADAS LAS CARTAS EN EL RIVAL
 // VALIDO QUE NUNCA PASO DE TURNO CON ACCION 6
     if (pasoTurnoUno==false){
         puntosNoPasarTurnoUno=10;
@@ -3783,7 +3806,7 @@ if (participanteGanador==nombreDos){
     if (cartasJugadorUno[4]!='A'){
         malUbicadasJugadorUno++;
     }
-    totalMalUbicadas=malUbicadasJugadorUno*5;// REALIZO LA CUENTA FINAL DE ESTOS PUNTOS POR ESTAR MAL ACOMODADAS LAS CARTAS EN EL RIVAL
+    totalMalUbicadas=malUbicadasJugadorUno*4;// REALIZO LA CUENTA FINAL DE ESTOS PUNTOS POR ESTAR MAL ACOMODADAS LAS CARTAS EN EL RIVAL
     // VALIDO QUE NUNCA PASO DE TURNO CON ACCION 6
     if (pasoTurnoDos==false){
         puntosNoPasarTurnoDos=10;

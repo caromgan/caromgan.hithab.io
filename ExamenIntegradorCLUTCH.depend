@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1699546107 source:c:\users\cmgan\onedrive\escritorio\examenintegradorclutch\examenintegradorclutch\funcionindice.cpp
+1699557662 source:c:\users\cmgan\onedrive\escritorio\examenintegradorclutch\examenintegradorclutch\funcionindice.cpp
 	<iostream>
 	<iomanip>
 	<ctime>
@@ -10,7 +10,7 @@
 	<string>
 	<locale>
 
-1699546107 c:\users\cmgan\onedrive\escritorio\examenintegradorclutch\examenintegradorclutch\funcionesclutch.h
+1699557662 c:\users\cmgan\onedrive\escritorio\examenintegradorclutch\examenintegradorclutch\funcionesclutch.h
 
 1697240269 source:c:\users\cmgan\onedrive\escritorio\examenintegradorclutch\examenintegradorclutch\funcionrepartir.cpp
 	<iostream>
@@ -20,7 +20,7 @@
 	<stdio.h>
 	"funcionesClutch.h"
 
-1699545459 source:c:\users\cmgan\onedrive\escritorio\examenintegradorclutch\examenintegradorclutch\mainclutch.cpp
+1699557673 source:c:\users\cmgan\onedrive\escritorio\examenintegradorclutch\examenintegradorclutch\mainclutch.cpp
 	<iostream>
 	<iomanip>
 	<ctime>

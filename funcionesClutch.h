@@ -1,7 +1,7 @@
 #ifndef FUNCIONESCLUTCH_H_INCLUDED
 #define FUNCIONESCLUTCH_H_INCLUDED
 
-void indice (string ,bool,string,int ,int ,int , int ,int ,int ,int ,int,string &nombreUno, string &nombreDos);
+void indice (int&,char &confirma,string ,bool,string,int ,int ,int , int ,int ,int ,int ,int,string &nombreUno, string &nombreDos);
 void repartir (string , string, char [], char [],int,int [], int [],int[][4],char[],int[]);
 void ronda (char [], char [],int, string , string, int,string &maximojugador);
 void comenzar (int, string,string, string,char [], char [],int, int[], int []);
